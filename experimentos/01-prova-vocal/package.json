@@ -1,0 +1,24 @@
+{
+  "name": "prova-vocal",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Experimento 01: captação, sincronismo e pontuação da voz",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node --import tsx --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "bench": "tsx scripts/benchmark.ts"
+  },
+  "dependencies": {
+    "pitchy": "4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.1",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "vite": "8.3.5"
+  }
+}

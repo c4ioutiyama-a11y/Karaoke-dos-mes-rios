@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prova vocal — Karaokê online</title>
+    <link rel="stylesheet" href="./src/ui/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Prova vocal</h1>
+      <p class="sub">Experimento 01: captação, sincronismo e pontuação da voz. Ferramenta de teste, não é o jogo.</p>
+    </header>
+
+    <main>
+      <section class="panel" aria-labelledby="h-entrada">
+        <h2 id="h-entrada">1. Entrada de voz</h2>
+        <div class="row">
+          <label>Fonte
+            <select id="input-kind">
+              <option value="mic">Microfone</option>
+              <option value="simulada">Voz simulada (teste sem microfone)</option>
+            </select>
+          </label>
+          <label>Dispositivo
+            <select id="device"><option value="">Padrão do sistema</option></select>
+          </label>
+        </div>
+        <fieldset class="row">
+          <legend>Filtros do navegador (para chamadas de voz)</legend>
+          <label><input type="checkbox" id="ec" /> Cancelamento de eco</label>
+          <label><input type="checkbox" id="ns" /> Supressão de ruído</label>
+          <label><input type="checkbox" id="agc" /> Ganho automático</label>
+        </fieldset>
+        <div class="row">
+          <button id="btn-mic" type="button">Ativar entrada</button>
+          <div class="meter" aria-label="Nível do microfone"><div id="meter-fill"></div></div>
+          <span id="level-text" class="mono">— dB</span>
+        </div>
+        <p id="mic-status" class="status" role="status"></p>
+        <p id="applied" class="mono small"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="h-ajustes">
+        <h2 id="h-ajustes">2. Ajustes</h2>
+        <div class="row">
+          <label>Detector
+            <select id="detector">
+              <option value="mpm">MPM (Pitchy)</option>
+              <option value="yin">YIN</option>
+            </select>
+          </label>
+          <label>Regra
+            <select id="rules">
+              <option value="casual">Casual v1</option>
+              <option value="dificil">Difícil v1</option>
+            </select>
+          </label>
+          <label><input type="checkbox" id="guide" /> Vocal guia na música</label>
+        </div>
+        <div class="row">
+          <label for="latency">Atraso compensado: <strong id="latency-text" class="mono">0 ms</strong></label>
+          <input type="range" id="latency" min="-100" max="600" step="5" value="0" />
+        </div>
+        <p id="latency-info" class="mono small"></p>
+      </section>
+
+      <section class="panel stage" aria-labelledby="h-canto">
+        <h2 id="h-canto">3. Cantar</h2>
+        <div class="row">
+          <button id="btn-sing" type="button" disabled>Cantar</button>
+          <button id="btn-stop" type="button" disabled>Parar</button>
+          <button id="btn-calibrate" type="button" disabled title="Use depois de uma execução dedicada à calibração">Calibrar com a última execução</button>
+          <span class="score">Pontos: <strong id="score" class="mono">0</strong></span>
+        </div>
+        <div class="lyrics" aria-live="polite">
+          <div id="lyric-now" class="lyric-now">&nbsp;</div>
+          <div id="lyric-next" class="lyric-next">&nbsp;</div>
+        </div>
+        <canvas id="highway" height="260" aria-label="Faixa de notas: barras são as notas esperadas; pontos são a sua voz"></canvas>
+        <p id="run-status" class="status" role="status"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="h-resultado">
+        <h2 id="h-resultado">4. Resultado</h2>
+        <div id="result">Nenhuma execução ainda.</div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/ui/main.ts"></script>
+  </body>
+</html>

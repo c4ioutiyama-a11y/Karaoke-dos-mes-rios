@@ -1,6 +1,6 @@
 # Plano de desenvolvimento por etapas
 
-Proposta de 13/11/2026. Nada aqui está aprovado. Prazos não foram estimados de propósito: a maior incerteza (avaliar canto de forma justa em dispositivos variados) só fica mensurável depois da Etapa 1.
+Proposta de 13/11/2026. As decisões aprovadas estão em `03-decisoes-em-aberto.md`; o resto continua como proposta. Prazos não foram estimados de propósito: a maior incerteza (avaliar canto de forma justa em dispositivos variados) só fica mensurável depois da Etapa 1.
 
 Cada etapa termina com uma **condição para avançar**. Se a condição não for atingida, o plano volta para revisão em vez de seguir adiante.
 
@@ -95,6 +95,19 @@ Caminho em três níveis, do mais previsível ao mais difícil:
 
 ---
 
+## Etapa 6 — Instalador (pedido em 13/11/2026)
+
+O instalador pode começar assim que a Etapa 2 estiver estável. Não precisa esperar o envio de músicas.
+
+- Escolher a ferramenta (recomendação: Electron; ver `03-decisoes-em-aberto.md`, item 16).
+- Repetir a prova vocal **dentro do instalador**, no Windows e nos outros sistemas desejados.
+- Instalador para Windows, com assinatura de código e atualização automática.
+- Manter a versão web em paralelo para quem só quer entrar por link.
+
+**Condição para considerar entregue:** um amigo baixa, instala, entra numa sala criada pela versão web ou pelo instalador e completa uma rodada, sem avisos de segurança inesperados.
+
+---
+
 ## Primeira versão × versões posteriores
 
 ### Primeira versão (meta: Etapas 1 a 3 concluídas)
@@ -111,6 +124,7 @@ Caminho em três níveis, do mais previsível ao mais difícil:
 
 ### Depois
 
+- Instalador para computador (Etapa 6), podendo vir logo depois da primeira versão.
 - Celular como plataforma suportada.
 - Catálogo maior e importador UltraStar.
 - Envio de músicas (Etapa 5), em níveis.

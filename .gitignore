@@ -6,3 +6,6 @@ dist/
 .env.*
 # gravações de voz de teste não vão para o repositório (privacidade)
 experimentos/**/gravacoes/
+
+# Saída de build e relatórios temporários
+experimentos/**/dist/
