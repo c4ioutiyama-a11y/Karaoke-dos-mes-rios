@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env
+.env.*
+# gravações de voz de teste não vão para o repositório (privacidade)
+experimentos/**/gravacoes/
