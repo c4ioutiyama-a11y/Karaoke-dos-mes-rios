@@ -28,6 +28,10 @@ Depois, abra http://localhost:5173 no Chrome ou no Edge, ative o microfone (com 
 
 O resto (Colyseus, LiveKit, limite de 8 pessoas, modos Disputa/Palco, parâmetros da pontuação etc.) continua **proposta a validar**. Veja [`docs/03-decisoes-em-aberto.md`](docs/03-decisoes-em-aberto.md).
 
+## Quer participar?
+
+Veja [`COMO-PARTICIPAR.md`](COMO-PARTICIPAR.md). Quem usa o Claude Code recebe as regras do projeto automaticamente pelo [`CLAUDE.md`](CLAUDE.md).
+
 ## Documentos
 
 | Arquivo | Conteúdo |
